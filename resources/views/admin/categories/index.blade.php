@@ -21,6 +21,16 @@
       <th class="text-right">Действие</th>
     </thead>
     <tbody>
+        <tfoot>
+      <tr>
+          <td colspan="3">
+              <ul class="pagination pull-right">
+                  {{$categories->links()}}
+              </ul>
+          </td>
+      </tr>
+  </tfoot>
+  </table>
       @forelse ($categories as $category)
         <tr>
           <td>{{$category->title}}</td>
@@ -38,11 +48,6 @@
       @endforelse
     </tbody>
   </table>
-
-
-
-//список категорий
-
 </div>
 
 @endsection
